@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lbstest.example.com.oscilloscope.Oscillograph">
+    <LinearLayout
+        android:id="@+id/switch_Lay"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/sensitive"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/TCPlick"
+            android:textSize="20sp"
+            android:text="电压数据："
+            android:layout_marginRight="50px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <Switch
+            android:layout_marginLeft="10dp"
+            android:id="@+id/switch_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sensitive"
+        android:layout_below="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/selectVppHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginRight="40dp"
+            android:text="时基：" />
+        <TextView
+            android:id="@+id/sensitive_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:textColor="@color/colorOrange"
+            android:textSize="20sp"
+            android:text="6ms/div"/>
+1        <ImageButton
+            android:id="@+id/add_sensitive"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:background="@mipmap/add_1" />
+        <ImageButton
+            android:layout_marginLeft="50dp"
+            android:id="@+id/delete_sensitive"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:background="@mipmap/dele"
+            android:layout_marginRight="60dp"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:id="@+id/link"
+        android:layout_below="@+id/sensitive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:text="连接状态："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/statu"
+            android:text="断开"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:layout_marginRight="60dp"
+            android:visibility="invisible"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="连接:"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Switch
+            android:id="@+id/connectSocket"
+            android:showText="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/link"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="开始"
+            android:id="@+id/ON"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <lbstest.example.com.oscilloscope.mSurfaceview
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/surfaceview"
+        android:layout_marginLeft="6px"
+        android:layout_width="1070px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="1000px" />
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

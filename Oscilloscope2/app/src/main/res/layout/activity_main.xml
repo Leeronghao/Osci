@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lbstest.example.com.oscilloscope.MainActivity">
+    <TextView
+        android:text="Android 数字电子示波器"
+        android:textSize="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:id="@+id/APP_name"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@+id/APP_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_marginRight="40dp"
+        android:text="使用指南"
+        android:id="@+id/textView" />
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/APP_name"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout2">
+        <TextView
+            android:id="@+id/one"
+            android:layout_marginTop="45dp"
+            android:textSize="17sp"
+            android:text="1.点击确认进入系统"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/two"
+            android:layout_marginTop="75dp"
+            android:textSize="17sp"
+            android:text="2.点击连接按钮等待连接，点击前端数据采集模块KEY1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/three"
+            android:layout_marginTop="105dp"
+            android:textSize="17sp"
+            android:text="3.连接成功后，点击开始即可得到波形数据与图像"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/four"
+            android:layout_marginTop="135dp"
+            android:textSize="17sp"
+            android:text="4.图标“加”代表增加时基，图标“减”代表减少时基"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/five"
+            android:layout_marginTop="165dp"
+            android:textSize="17sp"
+            android:text="4.电压数据开关用于控制电压数据显示"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/bottom"
+       android:id="@+id/relativeLayout">
+       <EditText
+           android:layout_width="match_parent"
+            android:focusable="false"
+           android:layout_height="wrap_content" />
+   </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/shape"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100px"
+            android:layout_marginBottom="40px"
+            android:id="@+id/connect"
+            android:text="确认"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@mipmap/tishi" />
+
+
+</RelativeLayout>
